@@ -1,0 +1,11 @@
+name: VaultDemoForHotBlocks
+version: 2.0
+description: Give the player money with Vault as Demo for HotBlocks
+author: Kirastur
+website:  https://github.com/Kirastur/VaultDemoForHotBlocks
+
+
+api-version: 1.17
+load: POSTWORLD
+main: de.polarwolf.hotvaultdemo.Main
+depend: [HotBlocks, Vault]
