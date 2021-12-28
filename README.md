@@ -3,7 +3,7 @@ This is a Demo for HotBlocks to demonstrate how you can use the HotBlocks Events
 
 To keep things simple we use Vault as Gateway to the Economy provider.
 
-Install the HeliumBalloon plugin from https://www.spigotmc.org/resources/heliumballoon.95902
+Install the HotBlocks plugin from https://www.spigotmc.org/resources/hotblocks-mechanic.93691/
 
 This demo requires the two demo rules from the out-of-the-box HotBlocks plugin.yml
 
