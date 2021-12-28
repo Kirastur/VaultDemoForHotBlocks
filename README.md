@@ -5,7 +5,7 @@ To keep things simple we use Vault as Gateway to the Economy provider.
 
 Install the HotBlocks plugin from https://www.spigotmc.org/resources/hotblocks-mechanic.93691
 
-This demo requires the two demo rules from the out-of-the-box HotBlocks plugin.yml
+This demo requires the two demo rules from the out-of-the-box HotBlocks config.yml
 
 To watch the demo, do the following (this example is based on "The New Economy" as Economy system):
 1. Install "Vault" and "The New Economy"
