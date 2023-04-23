@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>VaultDemoForHotBlocks</groupId>
+	<artifactId>VaultDemoForHotBlocks</artifactId>
+	<version>2.2</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.mvn-repo.directory>${project.basedir}/mvn-repo</project.mvn-repo.directory>
+		<project.mvn-repo.url>file://${project.mvn-repo.directory}</project.mvn-repo.url>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<bukkit.version>1.19.3-R0.1-SNAPSHOT</bukkit.version>
+		<vault.version>1.7</vault.version>
+		<hotblocks.version>2.2</hotblocks.version>
+	</properties>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>resources</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<release>17</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<!-- This adds the Spigot Maven repository to the build -->
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<!-- This adds the JitPack repository to the build -->
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+		<!-- This adds the Polarwolf repository to the build -->
+		<repository>
+			<id>polarwolf-repo</id>
+			<url>https://polarwolf.de/mvn-repo/</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<!--This adds the Spigot API artifact to the build -->
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>${bukkit.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Vault API -->
+		<dependency>
+			<groupId>com.github.milkbowl</groupId>
+			<artifactId>VaultAPI</artifactId>
+			<version>${vault.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.bukkit</groupId>
+					<artifactId>bukkit</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>provided</scope>
+		</dependency>
+		<!--This adds HotBlocks to the build -->
+		<dependency>
+			<groupId>de.polarwolf</groupId>
+			<artifactId>HotBlocks</artifactId>
+			<version>${hotblocks.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>

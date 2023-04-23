@@ -23,11 +23,11 @@ public final class Main extends JavaPlugin {
 		if (rsp == null) {
 			return false;
 		}
-		econ = rsp.getProvider(); //NOSONAR
+		econ = rsp.getProvider(); // NOSONAR
 		return econ != null;
 	}
 
-	// Use the simpliest Vault way to give the money to the player
+	// Use the simplest Vault way to give the money to the player
 	public void awardPlayer(Player player, int amount) {
 		EconomyResponse eres = econ.depositPlayer(player, amount);
 		if (eres.type == ResponseType.FAILURE) {

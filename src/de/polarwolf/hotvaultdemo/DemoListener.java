@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+
 import de.polarwolf.hotblocks.events.HotBlocksTriggerBlockEvent;
 
 public class DemoListener implements Listener {
